@@ -56,12 +56,12 @@ while True:
         speak("Attendance Taken..")
         time.sleep(5)
         if exist:
-            with open("Attendance/Attendance_" + date + ".csv", "+a") as csvfile:
+            with open("../Attendance/Attendance_" + date + ".csv", "+a") as csvfile:
                 writer=csv.writer(csvfile)
                 writer.writerow(attendance)
             csvfile.close()
         else:
-            with open("Attendance/Attendance_" + date + ".csv", "+a") as csvfile:
+            with open("../Attendance/Attendance_" + date + ".csv", "+a") as csvfile:
                 writer=csv.writer(csvfile)
                 writer.writerow(COL_NAMES)
                 writer.writerow(attendance)
